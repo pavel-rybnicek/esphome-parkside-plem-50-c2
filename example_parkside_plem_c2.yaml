@@ -1,0 +1,36 @@
+uart:
+  id: uart_bus
+  tx_pin: GPIO15
+  rx_pin: GPIO13
+  baud_rate: 9600
+  parity: NONE
+  stop_bits: 1
+  data_bits: 8
+#  debug:
+#    direction: BOTH
+#    after:
+#      bytes: 1
+#    sequence:
+#      - lambda: UARTDebug::log_hex(direction, bytes, ' ');
+
+external_components:
+  source:
+    type: git
+    url: https://github.com/pavel-rybnicek/esphome-inchanet-wallbox/
+    ref: main
+
+parkside_plem_50_c2:
+  id: parkside_plem_50_c2_id
+  uart_id: uart_bus
+  update_interval: 20s
+
+  # number of attempts in a case of error (default is 1)
+  attempt_count: 5
+
+  # sensors names
+  distance:
+    name: "Parkside PLEM 50 C2 - Distance"
+    unit_of_measurement: "mm"
+  error:
+    # indicates error of measurement
+    name: "Parkside PLEM 50 C2 - Error message"
