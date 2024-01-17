@@ -16,7 +16,7 @@ uart:
 external_components:
   source:
     type: git
-    url: https://github.com/pavel-rybnicek/esphome-inchanet-wallbox/
+    url: https://github.com/pavel-rybnicek/esphome-parkside-plem-50-c2/
     ref: main
 
 parkside_plem_50_c2:
