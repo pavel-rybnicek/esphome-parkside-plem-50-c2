@@ -8,6 +8,8 @@ ParksidePlem50C2Component = parkside_plem_50_c2_ns.class_('ParksidePlem50C2Compo
 DEPENDENCIES = ['uart']
 AUTO_LOAD = ['uart', 'sensor', 'text_sensor']
 
+MULTI_CONF = True
+
 CONF_DISTANCE = "distance"
 CONF_ERROR = "error"
 CONF_ATTEMPT_COUNT = "attempt_count"
