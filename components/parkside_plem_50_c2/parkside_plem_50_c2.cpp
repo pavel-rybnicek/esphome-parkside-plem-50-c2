@@ -120,7 +120,7 @@ int ParksidePlem50C2Component::process_measurement (const char * measurement)
 
   // get value len
   int valueLen = measurement[2] - '0';
-  if ( valueLen < 0 || valueLen > '9')
+  if ( valueLen < 0 || valueLen > 9)
   {
     this->process_error (measurement, "3rd character must be digit - len of value");
     return -3;
